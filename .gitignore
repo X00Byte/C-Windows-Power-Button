@@ -1,0 +1,5 @@
+*.exe
+WiPowerButton
+*.o
+bin/
+obj/

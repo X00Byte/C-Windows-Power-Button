@@ -4,18 +4,17 @@
 #include <string.h>
 #include <ctype.h>
 
-int ShowUsageMenu(void);
-int NoArgsProvided(int MainArguments ,bool * poweroff,bool *reboot);
+int Usage(void);
 int main(int argc, char *argv[]) {
-
 bool poweroff=false;
 bool reboot=false;
 if(argc <2){
- NoArgsProvided(argc,&poweroff ,&reboot);
+//  NoArgsProvided(argc,&poweroff ,&reboot);
+ Usage();
 }else if (argc == 2){
-if(strcmp(argv[1],"poweroff") == 0){
+if(strcmp(argv[1],"off") == 0){
 poweroff=true;
-}else if (strcmp(argv[1],"reboot") == 0){
+}else if (strcmp(argv[1],"res") == 0){
 reboot=true;
 }
 }
@@ -23,28 +22,14 @@ if(poweroff){
 system("shutdown /s /t 0");
 }else if (reboot)
 system("shutdown /r");
-
 return 0;
 }
-int ShowUsageMenu(void){
+int Usage(void){
 printf("Windows Power Button\n");
-printf("Shutdown  / Reboot A windows machine WITHOUT WASTING YOUR LIFE\n");
+printf("Usage : ./[commpiled Programme name ] <Action>\n");
+printf("Action : \n off  shutdown \n res  reboot the machine\n");
 printf("===========================\n");
-printf("1 - Shutdown / Poweroff\n");
-printf("2 - Reboot / Restart\n");
+printf("Exemple : ./WiPowerButton off \n");
 printf("===========================\n");
 return 0;
 };
-int NoArgsProvided(int MainArguments,bool * poweroff,bool *reboot){
-ShowUsageMenu(); 
-int option=0;
-scanf("%d",&option);
-if(option == 1){
-*poweroff=true;
-printf("Poweroff :");
-}else if(option == 2){
-*reboot=true;
-printf("Reboot");
-}else
-printf("\aInvalid Option :(\n");
-}

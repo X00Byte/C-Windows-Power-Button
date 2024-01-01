@@ -1,10 +1,10 @@
 <div align="center" id="readme-top">
   <h1 align="center">WinPowerButton</h1>
  <a href="https://github.com/X00Byte/WinPowerButton">
-    <img src="https://github.com/X00Byte/WinPowerButton/blob/main/repo_background.png" alt="Logo">
-  </a>
+    <img src="httpsgithub.com/X00Byte/win-power-button/blob/main/repo_background.png" alt="Logo">
+    </a>
   <p align="center">
-    A simple c programme to shutdow a windows machine without waiting for ever 
+    A simple c programme to shutdown a windows machine without waiting forever 
     <br />    ·
     <a href="https://github.com/X00Byte/WinPowerButton/issues">Report Bug</a>
     <a href="https://github.com/X00Byte/WinPowerButton/issues">Request Feature</a>
@@ -45,11 +45,27 @@ A simple c programme to shutdow a windows machine without waiting for ever
 To run this programme you need a a compiler (gcc) a python interpreter 
 
 ### Install & Usage
-1. Open the terminal & clone this repo
-2. cd to the repo's directory & open the terminalin the same directory
-3. Run the python script to compile the c programme
-4. Run the compiled programme and fellow the instarctions
+1. Open the terminal :
 
+```DOS
+git clone https://github.com/X00Byte/win-power-button.git
+```
+2. Change path to repo directory :
+```DOS
+cd win-power-button
+```
+3. Run the python script to compile the c programme
+```DOS
+python3 compile.py
+```
+Or 
+```DOS
+gcc WiPowerButton.c -o WiPowerButton
+```
+4. Run the compiled programme :
+```DOS
+./WiPowerButton
+```
 ## License
 
 Distributed under the GPL3 License. See `LICENSE.txt` for more information.
