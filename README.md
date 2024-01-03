@@ -1,7 +1,7 @@
 <div align="center" id="readme-top">
   <h1 align="center">WinPowerButton</h1>
  <a href="https://github.com/X00Byte/WinPowerButton">
-    <img src="httpsgithub.com/X00Byte/win-power-button/blob/main/repo_background.png" alt="Logo">
+    <img src="https://github.com/X00Byte/win-power-button/blob/main/repo_background.png" alt="Logo">
     </a>
   <p align="center">
     A simple c programme to shutdown a windows machine without waiting forever 
